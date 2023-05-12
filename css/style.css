@@ -1,0 +1,166 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+/*убрать отступ над меню навигацией*/
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+li {
+  list-style: none;
+}
+body {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: sans-serif;
+}
+.container {
+  max-width: 1000px;
+  padding: 0 10px;
+  margin: 0 auto;
+  display: flex;
+}
+.header {
+  padding-top: 25px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, #d8d4ca 0%, rgba(217, 217, 217, 0) 100%);
+}
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+}
+.tel {
+  font-size: 22px;
+  color: #fff;
+}
+
+.logo__img {
+  width: 60px;
+  height: 50px;
+}
+.btn {
+  border: 1px solid #fff;
+  padding: 23px 45px;
+  border-radius: 35%;
+}
+.btn:hover {
+  background-color: #fff;
+  color: #c0c0c0;
+}
+.main {
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 200px;
+  min-height: 100vh;
+}
+.main__title {
+  font-size: 71px;
+  text-transform: uppercase;
+  padding-bottom: 37px;
+}
+.main__text {
+  font-size: 20px;
+  padding-bottom: 30px;
+}
+.main__right {
+  margin-right: -122px;
+}
+.vr__img {
+  width: 500px;
+  height: 400px;
+}
+.button {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  font-style: 24px;
+  letter-spacing: 3px;
+  overflow: hidden;
+  padding: 15px 30px;
+  transition: 0.2s; /*с какой плавностью будет происходить анимация*/
+}
+.button__line {
+  position: absolute;
+  display: block;
+}
+.button__line--top {
+  width: 100%;
+  top: 0;
+  left: -100%; /*чтобы скрылась*/
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #53377a);
+}
+.button:hover .button__line--top {
+  left: 100%; /*как бы вызываем эту линию обратно*/
+  transition: 1s; /*с какой скоростью будет пролетать линия*/
+  transition-delay: 0.25s; /*задержка*/
+}
+
+.button__line--bottom {
+  width: 100%;
+  bottom: 0;
+  right: -100%; /*справа на лево*/
+  height: 2px;
+  background: linear-gradient(
+    270deg,
+    transparent,
+    #53377a
+  ); /*чтобы градиент был в другую сторону*/
+}
+.button:hover .button__line--bottom {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+.button__line--right {
+  width: 2px;
+  top: -100%;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #53377a);
+}
+.button:hover .button__line--right {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0s;
+}
+
+.button__line--left {
+  width: 2px;
+  bottom: -100%;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(0deg, transparent, #53377a);
+}
+.button:hover .button__line--left {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0s;
+}
+
+.button:hover {
+  box-shadow: 0 0 10px #53377a, 0 0 40px #53377a, 0 0 80px #53377a; /*рассеивание 10px. Чтобы свечение было ярким, вставляем св-ва неск. раз*/
+  background-color: #53377a;
+  color: #fff;
+  transition-delay: 1s;
+}
